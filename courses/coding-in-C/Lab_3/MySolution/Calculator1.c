@@ -9,11 +9,29 @@ int main() {
     printf("Enter an operation (+, -, *, /): ");
     scanf(" %c", &operation);
 
-    if (operation == '+') 
+    if (operation == '+') {
+        result = num1 + num2;
+        printf("The result of %.2f + %.2f = %.2f\n", num1, num2, result);
+    } else if (operation == '-') {
+        result = num1 - num2;
+        printf("The result of %.2f - %.2f = %.2f\n", num1, num2, result);
+    } else if (operation == '*') {
+        result = num1 * num2;
+        printf("The result of %.2f * %.2f = %.2f\n", num1, num2, result);
+    } else if (operation == '/') {
+        if (num2 == 0) {
+            printf("Error: Division by zero is not allowed.\n");
+        } else {
+            result = num1 / num2;
+            printf("The result of %.2f / %.2f = %.2f\n", num1, num2, result);
+        }
+    } else {
+        printf("Error: Invalid operation.\n");
+    }
 
     
 
-    
+    return 0;
     }
 
     
